@@ -27,7 +27,6 @@ jobs:
           pip install --upgrade pip
           pip install dbt-core dbt-snowflake  # Adjust based on your adapter
           dbt --version
-
       - name: "Step 03 - Generate dbt docs"
         id: step03
         run: |
