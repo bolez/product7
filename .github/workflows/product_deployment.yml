@@ -39,7 +39,11 @@ jobs:
           mkdir -p ${{ github.workspace }}/docs
           cp -r target/* ${{ github.workspace }}/docs/
           ls -al ${{ github.workspace }}/docs/index.html
-
+      - name: "Step 03.1 - Debug: List contents of docs folder"
+        run: |
+          echo "Listing contents of ${{ github.workspace }}/docs"
+          ls -ltra ${{ github.workspace }}/docs
+  
           
       - name: "Step 04 - Add .nojekyll file"
         id: step04
