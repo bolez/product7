@@ -35,6 +35,7 @@ jobs:
           cd $PROJECT_NAME/
           dbt deps --profiles-dir ./
           dbt docs generate --profiles-dir ./
+          ls -al target/
           mkdir -p ${{ github.workspace }}/docs
           cp -r target/* ${{ github.workspace }}/docs/
           ls -al ${{ github.workspace }}/docs/index.html
