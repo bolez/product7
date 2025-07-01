@@ -31,7 +31,7 @@ jobs:
         id: step03
         run: |
           source venv/bin/activate
-          cd $PROJECT_NAME/
+          cd .
           dbt deps --profiles-dir ./
           dbt docs generate --profiles-dir ./
           mkdir -p ${{ github.workspace }}/docs
